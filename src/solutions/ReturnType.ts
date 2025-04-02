@@ -6,14 +6,12 @@
 
 
 
-const add = (a: number, b: number) => {
+const add = (a: number, b: number): number => {
   return a + b;
 };
 
 
 
-
-// Extract the return type of a function type.
 type MyReturnType<T> = T extends (...args: any[]) => infer R ? R : never;
 
 type Result = MyReturnType<typeof add>;

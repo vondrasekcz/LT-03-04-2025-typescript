@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "rootDir": "./src",
+
+    /* Base Options: */
+    "esModuleInterop": true, // Helps mend a few of the fences between CommonJS and ES Modules.
+    "skipLibCheck": true, // Skips checking the types of .d.ts files. This is important for performance, because otherwise all node_modules will be checked.
+    "target": "es2022",
+    "moduleDetection": "force", // Forces TypeScript to consider all files as modules. This helps to avoid 'cannot redeclare block-scoped variable' errors.
+    "isolatedModules": true, // Prevents a few TS features which are unsafe when treating modules as isolated files.
+
+    /* Strictness */
+    "strict": true,
+    "noFallthroughCasesInSwitch": true, // Prevents you from forgetting to add a break statement to a case in a switch statement.
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
