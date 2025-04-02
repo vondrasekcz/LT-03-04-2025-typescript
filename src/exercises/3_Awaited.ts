@@ -1,13 +1,11 @@
 /**
- * 1. Without recursion
- * 2. With recursion
+ * Recursion refers to a function or type calling itself repeatedly
+ * until reaching a base condition.
  */
 
 
 
-type MyAwaited<T> = T extends Promise<infer InnerType>
-  ? MyAwaited<InnerType>
-  : T;
+type MyAwaited<T> = TODO
 
 
 

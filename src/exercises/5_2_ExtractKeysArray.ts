@@ -1,7 +1,3 @@
-/**
- * 
- */
-
 type FormValues = {
     name: {
         first: string;
@@ -24,14 +20,9 @@ type FormValues = {
 }
 
 
-type ExtractKeys<T> = T extends object
-    ? { [Key in keyof T & string]:
-        (T[Key] extends object
-            ? `${Key}.${ExtractKeys<T[Key]>}`
-            : Key);
-    }[keyof T & string]
-    : never
+type ExtractKeysArray<T> = TODO
 
 
-type Result = ExtractKeys<FormValues>;
+// expected outcome: ["name"] | ["address"] | ["contact"] | ["name", "first"] | ["name", "last"] ...
+type Result = ExtractKeysArray<FormValues>;
 //    ^?
