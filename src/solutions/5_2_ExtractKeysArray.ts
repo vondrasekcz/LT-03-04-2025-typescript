@@ -23,7 +23,7 @@ type FormValues = {
 type ExtractKeysArray<T> = T extends object
     ? { [Key in keyof T & string]:
         | [Key]
-        | [...Key[], ...ExtractKeysArray<T[Key]>]
+        | [Key, ...ExtractKeysArray<T[Key]>]
     }[keyof T & string]
     : never
 
